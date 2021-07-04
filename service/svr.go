@@ -2,7 +2,7 @@ package service
 
 import (
 	"context"
-	"fmt"
+	"log"
 	"os"
 	"time"
 	"twist/model"
@@ -53,7 +53,7 @@ func (job *Job) Start() {
 			if task.JobName == "" || task.TaskFunc == nil {
 				continue
 			}
-			fmt.Printf("运行 消费任务:【%s】,协程数:【%d】,描述:【%s】\n", task.JobName, task.ThreadNum, task.Desc)
+			log.Printf("运行 消费任务:【%s】,协程数:【%d】,描述:【%s】\n", task.JobName, task.ThreadNum, task.Desc)
 			go task.Run()
 		}
 	}
@@ -64,10 +64,10 @@ func (job *Job) Start() {
 				continue
 			}
 			if err := cronObj.AddJob(task.Spec, task); err != nil {
-				fmt.Println(fmt.Sprintf("%v", err))
+				log.Printf("AddJob %v", err)
 
 			}
-			fmt.Printf("运行 crontab任务:【%s】,协程数:【%d】,描述:【%s】\n", task.JobName, task.ThreadNum, task.Desc)
+			log.Printf("运行 crontab任务:【%s】,协程数:【%d】,描述:【%s】\n", task.JobName, task.ThreadNum, task.Desc)
 		}
 		cronObj.Start()
 	}
@@ -104,7 +104,7 @@ func (job *Job) syncStopFlags() {
 					go jf.dispatchStopSign()
 				}
 			}
-			for _, jf := range job.Comsumers {
+			for _, jf := range job.Crontabs {
 				if jf.JobName == jobName {
 					go jf.dispatchStopSign()
 				}

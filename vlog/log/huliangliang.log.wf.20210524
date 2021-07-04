@@ -1,0 +1,4 @@
+WARNING: 2021-05-24 19:12:38 [logid=987654321 file=vlog_test/vlog.go, no=31 call=main.LogTest] [logger=logHandle msg='The warning message is test']
+FATAL: 2021-05-24 19:12:38 [logid=987654321 file=vlog_test/vlog.go, no=32 call=main.LogTest] [logger=logHandle msg='The fatal message is test']
+WARNING: 2021-05-24 19:14:22 [logid=987654321 file=vlog_test/vlog.go, no=31 call=main.LogTest] [logger=logHandle msg='The warning message is test']
+FATAL: 2021-05-24 19:14:22 [logid=987654321 file=vlog_test/vlog.go, no=32 call=main.LogTest] [logger=logHandle msg='The fatal message is test']

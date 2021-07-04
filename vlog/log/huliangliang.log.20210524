@@ -1,0 +1,6 @@
+NOTICE: 2021-05-24 19:12:38 [logid=987654321 file=vlog_test/vlog.go, no=30 call=main.LogTest] [logger=logHandle msg='The notice message is test']
+DEBUG: 2021-05-24 19:12:38 [logid=987654321 file=vlog_test/vlog.go, no=33 call=main.LogTest] [logger=logHandle msg='The debug message is test']
+TRACE: 2021-05-24 19:12:38 [logid=987654321 file=vlog_test/vlog.go, no=34 call=main.LogTest] [logger=logHandle msg='The trace message is test']
+NOTICE: 2021-05-24 19:14:22 [logid=987654321 file=vlog_test/vlog.go, no=30 call=main.LogTest] [logger=logHandle msg='The notice message is test']
+DEBUG: 2021-05-24 19:14:22 [logid=987654321 file=vlog_test/vlog.go, no=33 call=main.LogTest] [logger=logHandle msg='The debug message is test']
+TRACE: 2021-05-24 19:14:22 [logid=987654321 file=vlog_test/vlog.go, no=34 call=main.LogTest] [logger=logHandle msg='The trace message is test']

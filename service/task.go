@@ -1,7 +1,7 @@
 package service
 
 import (
-	"fmt"
+	"log"
 	"sync"
 	"time"
 )
@@ -28,11 +28,11 @@ type JobTaskFunc interface {
 
 func (jf *JobTask) recordStart() {
 	jf.RunStatus = JobtaskStatusRunning
-	fmt.Printf("【%v】【%s】【%s】【%s】!\n", time.Now(), jf.JobName, jf.Desc, jf.status())
+	log.Printf("【%v】【%s】【%s】【%s】!\n", time.Now(), jf.JobName, jf.Desc, jf.status())
 }
 func (jf *JobTask) recordFinish() {
 	jf.RunStatus = JobtaskStatusFinish
-	fmt.Printf("【%v】【%s】【%s】【%s】!\n", time.Now(), jf.JobName, jf.Desc, jf.status())
+	log.Printf("【%v】【%s】【%s】【%s】!\n", time.Now(), jf.JobName, jf.Desc, jf.status())
 }
 
 func (jf *JobTask) status() string {
